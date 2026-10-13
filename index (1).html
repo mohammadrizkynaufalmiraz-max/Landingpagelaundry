@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Busa Biru Laundry - Antar Jemput Gratis, Selesai 24 Jam</title>
+<meta name="description" content="Laundry kiloan dan satuan dengan antar jemput gratis. Bersih, wangi, dan rapi dalam 24 jam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#" class="logo">Busa Biru</a>
+  <button class="menu-btn" aria-label="Buka menu" aria-expanded="false">Menu</button>
+  <nav id="menu">
+    <a href="#layanan">Layanan</a>
+    <a href="#cara">Cara kerja</a>
+    <a href="#harga">Hitung harga</a>
+    <a href="#faq">Tanya jawab</a>
+    <a href="#pesan" class="btn btn-small">Pesan jemput</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="bubbles" aria-hidden="true"></div>
+  <div class="hero-text">
+    <h1>Cucian beres,<br>waktu Anda balik.</h1>
+    <p>Kami jemput cucian di rumah, cuci dengan mesin dan deterjen yang aman, lalu antar kembali dalam 24 jam. Gratis ongkir untuk jarak 5 km.</p>
+    <div class="hero-actions">
+      <a href="#pesan" class="btn">Pesan jemput sekarang</a>
+      <a href="#harga" class="btn btn-ghost">Hitung harga</a>
+    </div>
+    <ul class="facts">
+      <li><strong>24 jam</strong> selesai</li>
+      <li><strong>Rp7.000</strong> per kg</li>
+      <li><strong>4,9/5</strong> dari 1.200 ulasan</li>
+    </ul>
+  </div>
+  <form class="order" id="pesan">
+    <h2>Pesan jemput</h2>
+    <label>Nama
+      <input type="text" name="nama" placeholder="Nama Anda" required>
+    </label>
+    <label>Alamat jemput
+      <input type="text" name="alamat" placeholder="Jalan, nomor, kelurahan" required>
+    </label>
+    <label>Layanan
+      <select name="layanan">
+        <option>Cuci + setrika</option>
+        <option>Cuci saja</option>
+        <option>Setrika saja</option>
+        <option>Cuci satuan (jas, gaun, selimut)</option>
+        <option>Express 6 jam</option>
+      </select>
+    </label>
+    <button type="submit" class="btn">Kirim lewat WhatsApp</button>
+    <p class="note">Pesan Anda akan terbuka di WhatsApp. Kami balas dalam 5 menit pada jam kerja.</p>
+  </form>
+</section>
+
+<section class="section" id="layanan">
+  <h2>Pilih layanan sesuai cucian Anda</h2>
+  <div class="services">
+    <article class="svc svc-big">
+      <h3>Kiloan reguler</h3>
+      <p>Pakaian harian, seprai, handuk. Dicuci terpisah warna, dilipat rapi, dan dikemas plastik.</p>
+      <p class="price">Rp7.000/kg</p>
+    </article>
+    <article class="svc">
+      <h3>Express 6 jam</h3>
+      <p>Untuk yang butuh cepat.</p>
+      <p class="price">Rp12.000/kg</p>
+    </article>
+    <article class="svc">
+      <h3>Satuan</h3>
+      <p>Jas, gaun, selimut, bed cover, boneka.</p>
+      <p class="price">mulai Rp15.000</p>
+    </article>
+    <article class="svc">
+      <h3>Sepatu</h3>
+      <p>Cuci dalam dan luar, tanpa merusak bahan.</p>
+      <p class="price">Rp35.000/pasang</p>
+    </article>
+  </div>
+</section>
+
+<section class="section steps-wrap" id="cara">
+  <h2>Dari pintu rumah kembali ke pintu rumah</h2>
+  <ol class="steps">
+    <li><h3>Pesan</h3><p>Isi form atau chat WhatsApp. Pilih jam jemput.</p></li>
+    <li><h3>Jemput</h3><p>Kurir menimbang di depan Anda dan mencatat jumlahnya.</p></li>
+    <li><h3>Cuci</h3><p>Dicuci, dikeringkan, dan disetrika di workshop kami.</p></li>
+    <li><h3>Antar</h3><p>Cucian kembali dalam 24 jam. Bayar tunai, transfer, atau QRIS.</p></li>
+  </ol>
+</section>
+
+<section class="section calc" id="harga">
+  <div>
+    <h2>Hitung estimasi biaya</h2>
+    <p>Geser berat cucian dan pilih layanan. Harga akhir mengikuti timbangan saat jemput.</p>
+  </div>
+  <div class="calc-box">
+    <label for="kg">Berat cucian: <output id="kgOut">5</output> kg</label>
+    <input type="range" id="kg" min="1" max="30" value="5">
+    <div class="choices" role="radiogroup" aria-label="Jenis layanan">
+      <label><input type="radio" name="tipe" value="7000" checked> Reguler</label>
+      <label><input type="radio" name="tipe" value="12000"> Express</label>
+      <label><input type="radio" name="tipe" value="4500"> Cuci saja</label>
+    </div>
+    <p class="total">Estimasi: <strong id="total">Rp35.000</strong></p>
+    <p class="note" id="promo"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Kata pelanggan kami</h2>
+  <div class="reviews">
+    <blockquote>Seprai dan handuk wangi sampai tiga hari. Kurirnya tepat waktu setiap minggu.<cite>Rina, ibu rumah tangga</cite></blockquote>
+    <blockquote>Kemeja kerja saya selalu rapi hari Senin pagi. Sangat membantu sebagai pekerja kantoran.<cite>Dimas, karyawan swasta</cite></blockquote>
+    <blockquote>Kos kami langganan di sini. Harga jelas, tidak ada biaya tambahan di akhir.<cite>Nadia, pemilik kos</cite></blockquote>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <h2>Pertanyaan yang sering masuk</h2>
+  <details><summary>Apakah cucian dicampur dengan pelanggan lain?</summary><p>Tidak. Setiap pesanan dicuci dalam satu tas dan satu putaran tersendiri.</p></details>
+  <details><summary>Bagaimana kalau ada pakaian rusak atau hilang?</summary><p>Kami mengganti sesuai nilai barang, maksimal 10 kali ongkos cuci. Laporkan dalam 24 jam setelah cucian diterima.</p></details>
+  <details><summary>Jam operasional dan area antar jemput?</summary><p>Setiap hari 07.00 sampai 21.00. Gratis ongkir radius 5 km, di atas itu Rp5.000.</p></details>
+  <details><summary>Boleh request tanpa pewangi?</summary><p>Bisa. Tulis catatan saat memesan, kami pakai deterjen hipoalergenik.</p></details>
+</section>
+
+<section class="cta">
+  <h2>Cucian menumpuk? Serahkan ke kami.</h2>
+  <a href="#pesan" class="btn">Pesan jemput</a>
+</section>
+</main>
+
+<footer>
+  <p><strong>Busa Biru Laundry</strong> - Jl. Contoh No. 12, Bandung</p>
+  <p>WhatsApp 0812-3456-7890 &nbsp; Buka setiap hari 07.00-21.00</p>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" aria-label="Chat WhatsApp">Chat</a>
+
+<script src="script.js"></script>
+</body>
+</html>
